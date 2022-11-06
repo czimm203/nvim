@@ -3,13 +3,11 @@ if not lspconfig_status then
     print("lsp")
     return
 end
-
 local cmp_lspconfig_status, _ = pcall(require, "cmp_nvim_lsp")
 if not cmp_lspconfig_status then
     print("cmp lsp")
     return
 end
-
 local keymap = vim.keymap
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
@@ -18,6 +16,7 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  keymap.set('n', '<space>k', vim.diagnostic.open_float, bufopts)
   keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -64,6 +63,10 @@ require('lspconfig')['rust_analyzer'].setup {
     on_attach = on_attach
 }
 require('lspconfig')['cssls'].setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+require('lspconfig')['gopls'].setup {
     capabilities = capabilities,
     on_attach = on_attach
 }

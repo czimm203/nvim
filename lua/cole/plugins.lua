@@ -44,13 +44,14 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-}
+  use 'nvim-tree/nvim-web-devicons' -- optional, for file icons
+  -- use {
+  --   'nvim-tree/nvim-tree.lua',
+  --   requires = {
+  --       'nvim-tree/nvim-web-devicons', -- optional, for file icons
+  --   },
+  --   tag = 'nightly' -- optional, updated every week. (see issue #1193)
+-- }
   use {'shaunsingh/oxocarbon.nvim', branch = 'fennel'}
   use 'ellisonleao/gruvbox.nvim'
   -- use 'bluz71/vim-nightfly-guicolors'
