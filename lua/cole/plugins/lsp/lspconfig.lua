@@ -16,7 +16,7 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
-  keymap.set('n', '<space>k', vim.diagnostic.open_float, bufopts)
+  keymap.set('n', 'gh', vim.diagnostic.open_float, bufopts)
   keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)

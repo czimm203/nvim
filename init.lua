@@ -6,5 +6,5 @@ require("cole.plugins.cmp")
 require("cole.plugins.lsp.mason")
 require("cole.plugins.lsp.lspconfig")
 require("cole.plugins.tresitter")
-require("cole.plugins.file_tree")
+require("cole.plugins.telescope")
 
