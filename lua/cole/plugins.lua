@@ -28,11 +28,11 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
-  use({'nvim-treesitter/nvim-treesitter',
-    run = function()
-        require("nvim-treesitter.install").update({with_sync = true})
-    end,
-  })
+  use({'nvim-treesitter/nvim-treesitter', {run=":TSUpdate"}
+    -- run = function()
+    --     require("nvim-treesitter.install").update({with_sync = true})
+    -- end,
+    })
   use 'tpope/vim-commentary'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
@@ -52,9 +52,10 @@ return require('packer').startup(function(use)
   --   },
   --   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 -- }
-  use {'shaunsingh/oxocarbon.nvim', branch = 'fennel'}
+  -- use {'shaunsingh/oxocarbon.nvim', branch = 'fennel'}
   use 'ellisonleao/gruvbox.nvim'
-  -- use 'bluz71/vim-nightfly-guicolors'
+  use {'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+} -- use 'bluz71/vim-nightfly-guicolors'
   -- use 'shaunsingh/oxocarbon.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'

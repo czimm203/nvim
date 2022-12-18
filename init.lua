@@ -7,4 +7,5 @@ require("cole.plugins.lsp.mason")
 require("cole.plugins.lsp.lspconfig")
 require("cole.plugins.tresitter")
 require("cole.plugins.telescope")
+require("cole.plugins.lualine")
 

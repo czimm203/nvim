@@ -3,6 +3,11 @@ if not status then
     print("Colorscheme not found")
     return
 end
+local function set_colors()
+    vim.api.nvim_set_hl(0,"Normal", {bg = "none"})
+    vim.api.nvim_set_hl(0,"NormalFloat", {bg = "none"})
+end
 
-vim.cmd("highlight Normal guibg=None")
-vim.cmd("highlight NonText guibg=None")
+set_colors()
+
+
