@@ -20,12 +20,10 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
--- opt.cursorline = true
-
-
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.cursorline = false
 
 opt.backspace = "indent,eol,start"
 
