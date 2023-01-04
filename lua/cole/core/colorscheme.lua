@@ -4,10 +4,11 @@ if not status then
     return
 end
 local function set_colors()
-    vim.api.nvim_set_hl(0,"Normal", {bg = "none"})
-    vim.api.nvim_set_hl(0,"NormalFloat", {bg = "none"})
+    vim.api.nvim_set_hl(0,"Normal", {bg = "none", sp = "none"})
+    vim.api.nvim_set_hl(0,"NormalFloat", {bg = "none", sp="none"})
+    vim.api.nvim_set_hl(0,"SignColumn", {bg = "none", sp="none"})
+    vim.api.nvim_set_hl(0,"CursorLine", {bg = "none", sp="none"})
 end
 
 set_colors()
-
 

@@ -42,6 +42,10 @@ require('lspconfig')['html'].setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
+-- require('lspconfig')['jedi_language_server'].setup {
+--     capabilities = capabilities,
+--     on_attach = on_attach
+-- }
 require('lspconfig')['pyright'].setup {
     capabilities = capabilities,
     on_attach = on_attach
