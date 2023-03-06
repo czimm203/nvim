@@ -1,4 +1,8 @@
 require("cole.plugins")
+require("cole.core.options")
+require("cole.core.keymaps")
+require("cole.core.colorscheme")
+require("cole.core.autocmds")
 require("cole.plugins.cmp")
 require("cole.plugins.lsp.mason")
 require("cole.plugins.lsp.lspconfig")
