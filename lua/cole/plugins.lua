@@ -26,6 +26,7 @@ end
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use({'nvim-treesitter/nvim-treesitter', {run="TSUpdate"}
