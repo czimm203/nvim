@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
     -- run = function()
     --     require("nvim-treesitter.install").update({with_sync = true})
     -- end,
-    })
+  })
   use 'tpope/vim-commentary'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'

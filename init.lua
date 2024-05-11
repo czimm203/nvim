@@ -13,4 +13,3 @@ require("cole.plugins.lualine")
 require("cole.core.options")
 require("cole.core.colorscheme")
 require("cole.core.keymaps")
-
