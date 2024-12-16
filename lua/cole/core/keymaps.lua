@@ -40,7 +40,7 @@ vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>st', function()
-    vim.cmd.hnew()
+    vim.cmd(":split")
     vim.cmd.term()
     vim.opt.number = false
     vim.opt.relativenumber = false
