@@ -40,10 +40,13 @@ vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>st', function()
-    vim.cmd.vnew()
+    vim.cmd.hnew()
     vim.cmd.term()
-    vim.cmd.wincmd("J")
-    vim.api.nvim_win_set_height(0, 10)
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+    -- vim.cmd.wincmd("J")
+    vim.cmd(":startinsert")
+    vim.api.nvim_win_set_height(0, 20)
 end)
 
 vim.keymap.set('t', '<esc>', '<C-\\><C-n>')
