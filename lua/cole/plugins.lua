@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
   use 'nvim-tree/nvim-web-devicons' -- optional, for file icons
+  use 'mfussenegger/nvim-lint'
   -- use {
   --   'nvim-tree/nvim-tree.lua',
   --   requires = {

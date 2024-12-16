@@ -9,7 +9,7 @@ keymap.set("n", "H", vim.cmd.bN)
 keymap.set("n", "<leader>c", vim.cmd.bd)
 keymap.set("n", "<leader>c", vim.cmd.bd)
 keymap.set("n", "<leader>wh", "<C-w>h")
-keymap.set("n", "<leader>wl", "<C-w>l")
+keymap.set("n", "<leader>w;", "<C-w>l")
 keymap.set("n", "<leader>wv", "<C-w>v")
 
 -- keymap.set("n", "L", ":bn<cr>")
