@@ -50,7 +50,11 @@ require('lspconfig')['pyright'].setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
-require('lspconfig')['svelte'].setup {
+-- require('lspconfig')['tsserver'].setup {
+--     capabilities = capabilities,
+--     on_attach = on_attach
+-- }
+require('lspconfig')['ts_ls'].setup {
     capabilities = capabilities,
     on_attach = on_attach
 }

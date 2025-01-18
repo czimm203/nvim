@@ -3,16 +3,16 @@ require("mason").setup()
 require('mason-lspconfig').setup({
     ensure_installed = {
         -- "tailwindcss",
-        "html",
-        "cssls",
-        "lua_ls",
-        "clangd",
+        -- "html",
+        -- "cssls",
+        -- "lua_ls",
+        -- "clangd",
         -- "tsserver",
-        "pyright",
-        "sqlls",
+        -- "pyright",
+        -- "sqlls",
         -- "svelte",
-        "rust_analyzer",
+        -- "rust_analyzer",
         -- "yamlls",
-        "jsonls",
+        -- "jsonls",
     }
 })
