@@ -3,7 +3,52 @@ require("dapui").setup()
 local dap = require("dap")
 local dui = require("dapui")
 
-vim.keymap.set('n', '<F5>', function() 
+local cfg = {
+    configurations = {
+        -- C lang configurations
+        c = {
+            {
+                name = "Launch debugger",
+                type = "lldb",
+                request = "launch",
+                cwd = "${workspaceFolder}",
+                program = function()
+                    -- Build with debug symbols
+                    local out = vim.fn.system({"make", "debug"})
+                    -- Check for errors
+                    if vim.v.shell_error ~= 0 then
+                        vim.notify(out, vim.log.levels.ERROR)
+                        return nil
+                    end
+                    -- Return path to the debuggable program
+                    return "path/to/executable"
+                end,
+            },
+        },
+        odin = {
+            {
+                name = "Debug Odin",
+                type = "lldb",
+                request = "launch",
+                cwd = "${workspaceFolder}",
+                program = function()
+                    -- Build with debug symbols
+                    local out = vim.fn.system({"odin", "build", ".", "-debug", "./debug"})
+                    -- Check for errors
+                    if vim.v.shell_error ~= 0 then
+                        vim.notify(out, vim.log.levels.ERROR)
+                        return nil
+                    end
+                    -- Return path to the debuggable program
+                    return "./debug"
+                end,
+            },
+        },
+    },
+}
+
+require('dap-lldb').setup(cfg)
+vim.keymap.set('n', '<F5>', function()
     require('dap').continue()
     dui.open()
 end)

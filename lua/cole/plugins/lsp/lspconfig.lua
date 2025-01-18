@@ -54,10 +54,10 @@ require('lspconfig')['svelte'].setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
--- require('lspconfig')['tsserver'].setup {
---     capabilities = capabilities,
---     on_attach = on_attach
--- }
+require('lspconfig')['ts_ls'].setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
 require('lspconfig')['tailwindcss'].setup {
     capabilities = capabilities,
     on_attach = on_attach

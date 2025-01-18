@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use 'leoluz/nvim-dap-go'
+  use { 'julianolf/nvim-dap-lldb', requires = {'mfussenegger/nvim-dap'}}
   -- use {
   --   'nvim-tree/nvim-tree.lua',
   --   requires = {
